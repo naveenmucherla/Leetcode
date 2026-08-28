@@ -1,6 +1,6 @@
 class Solution {
     public String lexPalindromicPermutation(String s, String target) {
-         int n = s.length();
+        int n = s.length();
         int halfLen = n / 2;
 
         // 1. Frequency calculation and validation
