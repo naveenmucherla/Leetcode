@@ -1,17 +1,21 @@
 class Solution {
     public boolean uniqueOccurrences(int[] arr) {
-        Map<Integer , Integer> map = new HashMap<>();
-        for(int num : arr){
-            map.put(num , map.getOrDefault(num , 0) + 1);
+        HashMap<Integer,Integer> map=new HashMap<>();
+        for(int num:arr){
+             if(map.containsKey(num)){
+                 map.put(num,map.get(num)+1);
+             }
+             else{
+                map.put(num,0);
+             }
         }
-        System.out.println(map);
-       Set<Integer> hash = new HashSet<>();
-       for(int num : map.keySet()){
-            if(hash.contains(map.get(num))){
-                return false;
+        HashSet<Integer> set=new HashSet<>();
+        for(int i:map.keySet()){
+            if(set.contains(map.get(i))){
+               return false;
             }
-            hash.add(map.get(num));
-       }
+          set.add(map.get(i));
+        }
         return true;
     }
 }
