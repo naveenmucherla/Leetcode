@@ -5,7 +5,13 @@ class Solution {
             map.put(num , map.getOrDefault(num , 0) + 1);
         }
         System.out.println(map);
-       Set<Integer> hash = new HashSet<>(map.values());
-        return hash.size() == map.size();
+       Set<Integer> hash = new HashSet<>();
+       for(int num : map.keySet()){
+            if(hash.contains(map.get(num))){
+                return false;
+            }
+            hash.add(map.get(num));
+       }
+        return true;
     }
 }
