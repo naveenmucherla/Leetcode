@@ -8,7 +8,7 @@ class Solution {
         map.put('C' , 100);
         map.put('D' , 500);
         map.put('M' , 1000);
-        System.out.println(map);
+        //System.out.println(map);
 
         int total = 0;
         int n = s.length();
