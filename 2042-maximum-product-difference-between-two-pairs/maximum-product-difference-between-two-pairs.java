@@ -14,7 +14,7 @@ class Solution {
             else if(shigh < num){
                 shigh = num;
             }
-            
+
            if(low > num){
                 slow = low;
                 low = num;
@@ -23,9 +23,9 @@ class Solution {
                 slow = num;
             }
         }
-        System.out.println(high);
-        System.out.println(shigh);
-        System.out.println(low);
+        //System.out.println(high);
+        //System.out.println(shigh);
+        //System.out.println(low);
         //System.out.println(slow);
         return (high * shigh) - (low * slow);
     }
