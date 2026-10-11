@@ -13,7 +13,7 @@ class Solution {
         if(stack.isEmpty()){
             return "";
         }
-        System.out.println(stack);
+        //System.out.println(stack);
         StringBuilder sb = new StringBuilder();
         for(char c : stack){
           sb.append(c);
